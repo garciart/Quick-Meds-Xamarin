@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quick_Meds_Xamarin.iOS", "Q
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quick_Meds_Xamarin.UWP", "Quick_Meds_Xamarin\Quick_Meds_Xamarin.UWP\Quick_Meds_Xamarin.UWP.csproj", "{A21FD04C-2B18-45C9-8E9A-83331FB7BA8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quick_Meds_Xamarin", "Quick_Meds_Xamarin\Quick_Meds_Xamarin\Quick_Meds_Xamarin.csproj", "{7D305E21-AB40-46E5-A375-AF9BE010CF93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quick_Meds_Xamarin", "Quick_Meds_Xamarin\Quick_Meds_Xamarin\Quick_Meds_Xamarin.csproj", "{7D305E21-AB40-46E5-A375-AF9BE010CF93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

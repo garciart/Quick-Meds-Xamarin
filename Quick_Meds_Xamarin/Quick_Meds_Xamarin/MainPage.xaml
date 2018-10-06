@@ -3,21 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Quick_Meds_Xamarin"
              x:Class="Quick_Meds_Xamarin.MainPage">
+    <ContentPage.Resources>
+        <StyleSheet Source="Styles.css" />
+    </ContentPage.Resources>
 
-    <StackLayout VerticalOptions="CenterAndExpand">
-        <!-- Place new controls here -->
-        <ContentView Padding="6">
-            <Label Text="Welcome to the Quick Electronic Medical Reference!" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
-        </ContentView>
-        <ContentView Padding="6">
-            <Label Text="Current as of XXXX" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
-        </ContentView>
-        <ContentView Padding="6">
-            <Button x:Name="button1" Text="Look Up Medications by Name" HorizontalOptions="Center" Clicked="Med_Button_Clicked" />
-        </ContentView>
-        <ContentView Padding="6">
-            <Button x:Name="button2" Text="Look Up Medications by Conditions" HorizontalOptions="Center" Clicked="Con_Button_Clicked" />
-        </ContentView>
+    <StackLayout VerticalOptions="Center">
+        <Label Text="Welcome to the Quick Medication Reference!" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+        <Label Text="Current as of XXXX" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+        <Button x:Name="button1" Text="Look Up Medications by Name" HorizontalOptions="Center" Clicked="Med_Button_Clicked" />
+        <Button x:Name="button2" Text="Look Up Medications by Conditions" HorizontalOptions="Center" Clicked="Con_Button_Clicked" />
     </StackLayout>
 
 </ContentPage>

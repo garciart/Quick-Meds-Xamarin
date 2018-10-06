@@ -23,33 +23,28 @@
  */
 
 using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using System.Collections.Generic;
+using System.Text;
 
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Quick_Meds_Xamarin {
     /**
-     * Application controller page
+     * Class for common constants
      *
      * @author Rob Garcia at rgarcia@rgprogramming.com
      */
-    public partial class App : Application {
-        public App() {
-            InitializeComponent();
-
-            MainPage = new NavigationPage(new MainPage());
-        }
-
-        protected override void OnStart() {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep() {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume() {
-            // Handle when your app resumes
+    public class Constants {
+        /**
+         * Look-up flags
+         */
+        public enum LookUpFlag {
+            /**
+             * MEDS to display medications
+             */
+            MEDS,
+            /**
+             * COND to display conditions
+             */
+            CONS
         }
     }
 }
