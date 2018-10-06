@@ -8,7 +8,7 @@ namespace Quick_Meds_Xamarin {
         public App() {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart() {

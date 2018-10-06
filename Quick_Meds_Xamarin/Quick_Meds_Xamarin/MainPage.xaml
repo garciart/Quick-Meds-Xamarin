@@ -4,11 +4,20 @@
              xmlns:local="clr-namespace:Quick_Meds_Xamarin"
              x:Class="Quick_Meds_Xamarin.MainPage">
 
-    <StackLayout>
+    <StackLayout VerticalOptions="CenterAndExpand">
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <ContentView Padding="6">
+            <Label Text="Welcome to the Quick Electronic Medical Reference!" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+        </ContentView>
+        <ContentView Padding="6">
+            <Label Text="Current as of XXXX" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+        </ContentView>
+        <ContentView Padding="6">
+            <Button x:Name="button1" Text="Look Up Medications by Name" HorizontalOptions="Center" Clicked="Med_Button_Clicked" />
+        </ContentView>
+        <ContentView Padding="6">
+            <Button x:Name="button2" Text="Look Up Medications by Conditions" HorizontalOptions="Center" Clicked="Con_Button_Clicked" />
+        </ContentView>
     </StackLayout>
 
 </ContentPage>

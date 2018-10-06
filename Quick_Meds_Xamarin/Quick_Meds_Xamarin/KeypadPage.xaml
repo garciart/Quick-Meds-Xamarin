@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Quick_Meds_Xamarin.KeypadPage">
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <Label Text="Welcome to the Keypad!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Grid HorizontalOptions="Center" VerticalOptions="Center">
+                <Button x:Name="ABC" CommandParameter="1" Text="ABC" Grid.Row="0" Grid.Column="0" Clicked="Button_Clicked" />
+                <Button x:Name="DEF" CommandParameter="2" Text="DEF" Grid.Row="0" Grid.Column="1" Clicked="Button_Clicked" />
+                <Button x:Name="GHI" CommandParameter="3" Text="GHI" Grid.Row="0" Grid.Column="2" Clicked="Button_Clicked" />
+                <Button x:Name="JKL" CommandParameter="4" Text="JKL" Grid.Row="1" Grid.Column="0" Clicked="Button_Clicked" />
+                <Button x:Name="MNO" CommandParameter="5" Text="MNO" Grid.Row="1" Grid.Column="1" Clicked="Button_Clicked" />
+                <Button x:Name="PQR" CommandParameter="6" Text="PQR" Grid.Row="1" Grid.Column="2" Clicked="Button_Clicked" />
+                <Button x:Name="STU" CommandParameter="7" Text="STU" Grid.Row="2" Grid.Column="0" Clicked="Button_Clicked" />
+                <Button x:Name="VWX" CommandParameter="8" Text="VWX" Grid.Row="2" Grid.Column="1" Clicked="Button_Clicked" />
+                <Button x:Name="YZ" CommandParameter="9" Text="YZ" Grid.Row="2" Grid.Column="2" Clicked="Button_Clicked" />
+            </Grid>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
