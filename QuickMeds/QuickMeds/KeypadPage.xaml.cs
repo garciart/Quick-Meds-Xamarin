@@ -46,7 +46,7 @@ namespace QuickMeds
         public KeypadPage(LookUpFlag lookUpFlag) {
             InitializeComponent();
             this.lookUpFlag = lookUpFlag;
-            KeypadLabel.Text = (String.Format("Press the key that matches the first letter of the {0} you are searching for:", (lookUpFlag == LookUpFlag.CONS ? "condition" : "medication")));
+            KeypadLabel.Text = (String.Format("Press the key that contains the first letter of the patient's {0}:", (lookUpFlag == LookUpFlag.CONS ? "condition" : "medication")));
         }
 
         async void Button_Clicked(object sender, EventArgs e) {

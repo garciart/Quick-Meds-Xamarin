@@ -39,13 +39,14 @@ namespace QuickMeds {
     public partial class MainPage : ContentPage {
         public MainPage() {
             InitializeComponent();
+            headerImage.Source = ImageSource.FromResource("QuickMeds.Assets.headerImage_v1.png");
         }
 
-        async void Med_Button_Clicked(object sender, EventArgs e) {
+        async void MedNameButton_Clicked(object sender, EventArgs e) {
             await Navigation.PushAsync(new KeypadPage(LookUpFlag.MEDS));
         }
 
-        async void Con_Button_Clicked(object sender, EventArgs e) {
+        async void ConNameButton_Clicked(object sender, EventArgs e) {
             await Navigation.PushAsync(new KeypadPage(LookUpFlag.CONS));
         }
     }

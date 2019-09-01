@@ -118,18 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="conNameButtonText" xml:space="preserve">
-    <value>Search by Condition...</value>
+    <value>Buscar por condición...</value>
   </data>
   <data name="medNameButtonText" xml:space="preserve">
-    <value>Search for Medication...</value>
+    <value>Buscar un medicamento...</value>
   </data>
   <data name="Subtitle" xml:space="preserve">
-    <value>Quick Prescription Medication Reference for Emergency Medical Service (EMS) Providers</value>
+    <value>Referencia rápida de medicamentos recetados para los proveedores de Servicios de Emergencias Médicas (SEM)</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>QUICKMEDS FOR EMS</value>
+    <value>QUICKMEDS PARA SEM</value>
   </data>
   <data name="UpdateYear" xml:space="preserve">
-    <value>Updated for 2017</value>
+    <value>Actualizado para 2017</value>
   </data>
 </root>
