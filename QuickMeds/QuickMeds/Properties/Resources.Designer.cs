@@ -59,50 +59,5 @@ namespace QuickMeds.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Search by Condition....
-        /// </summary>
-        public static string conNameButtonText {
-            get {
-                return ResourceManager.GetString("conNameButtonText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Search for Medication....
-        /// </summary>
-        public static string medNameButtonText {
-            get {
-                return ResourceManager.GetString("medNameButtonText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Quick Prescription Medication Reference for Emergency Medical Service (EMS) Providers.
-        /// </summary>
-        public static string Subtitle {
-            get {
-                return ResourceManager.GetString("Subtitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to QUICKMEDS FOR EMS.
-        /// </summary>
-        public static string Title {
-            get {
-                return ResourceManager.GetString("Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Updated for 2017.
-        /// </summary>
-        public static string UpdateYear {
-            get {
-                return ResourceManager.GetString("UpdateYear", resourceCulture);
-            }
-        }
     }
 }

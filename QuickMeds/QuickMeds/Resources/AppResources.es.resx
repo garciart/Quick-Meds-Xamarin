@@ -119,17 +119,38 @@
   </resheader>
   <data name="conNameButtonText" xml:space="preserve">
     <value>Buscar por condición...</value>
+    <comment>Search by Condition...</comment>
+  </data>
+  <data name="KeypadLabelCondition" xml:space="preserve">
+    <value>Presione la tecla que coincida con la primera letra de la condición del paciente.</value>
+    <comment>Press the key that matches the first letter of the patient's condition.</comment>
+  </data>
+  <data name="KeypadLabelMedication" xml:space="preserve">
+    <value>Presione la tecla que coincida con la primera letra del medicamento del paciente.</value>
+    <comment>Press the key that matches the first letter of the patient's medication.</comment>
   </data>
   <data name="medNameButtonText" xml:space="preserve">
     <value>Buscar un medicamento...</value>
+    <comment>Search for Medication...</comment>
+  </data>
+  <data name="PressCheckText" xml:space="preserve">
+    <value>¡Presionaste {0}!</value>
+    <comment>You pressed {0}!</comment>
+  </data>
+  <data name="PressCheckTitle" xml:space="preserve">
+    <value>Verificación de selección!</value>
+    <comment>Press Check!</comment>
   </data>
   <data name="Subtitle" xml:space="preserve">
     <value>Referencia rápida de medicamentos recetados para los proveedores de Servicios de Emergencias Médicas (SEM)</value>
+    <comment>Quick Prescription Medication Reference for Emergency Medical Service (EMS) Providers</comment>
   </data>
   <data name="Title" xml:space="preserve">
     <value>QUICKMEDS PARA SEM</value>
+    <comment>QUICKMEDS FOR EMS</comment>
   </data>
   <data name="UpdateYear" xml:space="preserve">
     <value>Actualizado para 2017</value>
+    <comment>Updated for 2017</comment>
   </data>
 </root>

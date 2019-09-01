@@ -22,17 +22,12 @@
  * THE SOFTWARE.
  */
 
+using QuickMeds.Resources;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using static QuickMeds.Constants;
 
-namespace QuickMeds
-{
+namespace QuickMeds {
     /**
      * Keypad page to look up medications or conditions
      *
@@ -41,58 +36,59 @@ namespace QuickMeds
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class KeypadPage : ContentPage
 	{
-        private LookUpFlag lookUpFlag;
+        private Constants.LookUpFlag lookUpFlag;
 
-        public KeypadPage(LookUpFlag lookUpFlag) {
+        public KeypadPage(Constants.LookUpFlag lookUpFlag) {
             InitializeComponent();
             this.lookUpFlag = lookUpFlag;
-            KeypadLabel.Text = (String.Format("Press the key that contains the first letter of the patient's {0}:", (lookUpFlag == LookUpFlag.CONS ? "condition" : "medication")));
+            KeypadLabel.Text = (lookUpFlag == Constants.LookUpFlag.CONS ? AppResources.KeypadLabelCondition : AppResources.KeypadLabelMedication);
         }
 
         async void Button_Clicked(object sender, EventArgs e) {
+            string letterGroup = "";
             switch(((Button)sender).CommandParameter) {
                 case "1": {
-                        await this.DisplayAlert("Press Check!", "You pressed ABC!", "OK");
+                        letterGroup = "ABC";
                         break;
                     }
                 case "2": {
-                        await this.DisplayAlert("Press Check!", "You pressed DEF!", "OK");
+                        letterGroup = "DEF";
                         break;
                     }
                 case "3": {
-                        await this.DisplayAlert("Press Check!", "You pressed GHI!", "OK");
+                        letterGroup = "GHI";
                         break;
                     }
                 case "4": {
-                        await this.DisplayAlert("Press Check!", "You pressed JKL!", "OK");
+                        letterGroup = "JKL";
                         break;
                     }
                 case "5": {
-                        await this.DisplayAlert("Press Check!", "You pressed MNO!", "OK");
+                        letterGroup = "MNO";
                         break;
                     }
                 case "6": {
-                        await this.DisplayAlert("Press Check!", "You pressed PQR!", "OK");
+                        letterGroup = "PQR";
                         break;
                     }
                 case "7": {
-                        await this.DisplayAlert("Press Check!", "You pressed STU!", "OK");
+                        letterGroup = "STU";
                         break;
                     }
                 case "8": {
-                        await this.DisplayAlert("Press Check!", "You pressed VWX!", "OK");
+                        letterGroup = "VWX";
                         break;
                     }
                 case "9": {
-                        await this.DisplayAlert("Press Check!", "You pressed YZ!", "OK");
+                        letterGroup = "YZ";
                         break;
                     }
                 default: {
-                        await this.DisplayAlert("Press Check!", "What button did you press?", "OK");
+                        letterGroup = "???";
                         break;
                     }
             }
-
+            await this.DisplayAlert(AppResources.PressCheckTitle, (String.Format(AppResources.PressCheckText, letterGroup)), "OK");
             /*
             if (((Button)sender).Equals(ABC)) {
                 await this.DisplayAlert("Press Check!", "You pressed Button 1!", "OK");

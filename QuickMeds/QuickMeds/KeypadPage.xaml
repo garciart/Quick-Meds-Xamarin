@@ -7,8 +7,8 @@
     </ContentPage.Padding>
     <ContentPage.Content>
 
-        <StackLayout Padding="10" VerticalOptions="CenterAndExpand">
-            <Label x:Name="KeypadLabel"  Text="Welcome to the Keypad!" HorizontalTextAlignment="Center" />
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label x:Name="KeypadLabel" HorizontalTextAlignment="Center" />
             <Grid HorizontalOptions="Center" VerticalOptions="Center">
                 <Button x:Name="ABC" CommandParameter="1" Text="ABC" Grid.Row="0" Grid.Column="0" Clicked="Button_Clicked" StyleClass="button" />
                 <Button x:Name="DEF" CommandParameter="2" Text="DEF" Grid.Row="0" Grid.Column="1" Clicked="Button_Clicked" StyleClass="button" />

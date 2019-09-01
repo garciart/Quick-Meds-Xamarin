@@ -70,11 +70,47 @@ namespace QuickMeds.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Press the key that matches the first letter of the patient&apos;s condition..
+        /// </summary>
+        public static string KeypadLabelCondition {
+            get {
+                return ResourceManager.GetString("KeypadLabelCondition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Press the key that matches the first letter of the patient&apos;s medication..
+        /// </summary>
+        public static string KeypadLabelMedication {
+            get {
+                return ResourceManager.GetString("KeypadLabelMedication", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Search for Medication....
         /// </summary>
         public static string medNameButtonText {
             get {
                 return ResourceManager.GetString("medNameButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You pressed {0}!.
+        /// </summary>
+        public static string PressCheckText {
+            get {
+                return ResourceManager.GetString("PressCheckText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Press Check!.
+        /// </summary>
+        public static string PressCheckTitle {
+            get {
+                return ResourceManager.GetString("PressCheckTitle", resourceCulture);
             }
         }
         

@@ -22,10 +22,6 @@
  * THE SOFTWARE.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace QuickMeds {
     /**
      * Class for common constants

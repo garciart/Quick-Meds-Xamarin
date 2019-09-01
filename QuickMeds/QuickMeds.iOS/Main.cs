@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using UIKit;
 
-using Foundation;
-using UIKit;
-
-namespace QuickMeds.iOS
-{
+namespace QuickMeds.iOS {
     public class Application
     {
         // This is the main entry point of the application.

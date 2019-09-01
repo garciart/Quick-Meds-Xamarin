@@ -120,8 +120,20 @@
   <data name="conNameButtonText" xml:space="preserve">
     <value>Search by Condition...</value>
   </data>
+  <data name="KeypadLabelCondition" xml:space="preserve">
+    <value>Press the key that matches the first letter of the patient's condition.</value>
+  </data>
+  <data name="KeypadLabelMedication" xml:space="preserve">
+    <value>Press the key that matches the first letter of the patient's medication.</value>
+  </data>
   <data name="medNameButtonText" xml:space="preserve">
     <value>Search for Medication...</value>
+  </data>
+  <data name="PressCheckText" xml:space="preserve">
+    <value>You pressed {0}!</value>
+  </data>
+  <data name="PressCheckTitle" xml:space="preserve">
+    <value>Press Check!</value>
   </data>
   <data name="Subtitle" xml:space="preserve">
     <value>Quick Prescription Medication Reference for Emergency Medical Service (EMS) Providers</value>

@@ -23,12 +23,7 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
-using static QuickMeds.Constants;
 
 namespace QuickMeds {
     /**
@@ -43,11 +38,11 @@ namespace QuickMeds {
         }
 
         async void MedNameButton_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new KeypadPage(LookUpFlag.MEDS));
+            await Navigation.PushAsync(new KeypadPage(Constants.LookUpFlag.MEDS));
         }
 
         async void ConNameButton_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new KeypadPage(LookUpFlag.CONS));
+            await Navigation.PushAsync(new KeypadPage(Constants.LookUpFlag.CONS));
         }
     }
 }
