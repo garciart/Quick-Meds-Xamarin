@@ -34,19 +34,16 @@ namespace QuickMeds {
      * @author Rob Garcia at rgarcia@rgprogramming.com
      */
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class KeypadPage : ContentPage
-	{
-        private Constants.LookUpFlag lookUpFlag;
-
+    public partial class KeypadPage : ContentPage {
         public KeypadPage(Constants.LookUpFlag lookUpFlag) {
             InitializeComponent();
-            this.lookUpFlag = lookUpFlag;
-            KeypadLabel.Text = (lookUpFlag == Constants.LookUpFlag.CONS ? AppResources.KeypadLabelCondition : AppResources.KeypadLabelMedication);
+            Title = (lookUpFlag == Constants.LookUpFlag.CONS ? AppResources.ConditionSearchTitle : AppResources.MedicationSearchTitle);
+            KeypadLabel.Text = (lookUpFlag == Constants.LookUpFlag.CONS ? AppResources.ConditionSearchText : AppResources.MedicationSearchText);
         }
 
         async void Button_Clicked(object sender, EventArgs e) {
             string letterGroup = "";
-            switch(((Button)sender).CommandParameter) {
+            switch (((Button)sender).CommandParameter) {
                 case "1": {
                         letterGroup = "ABC";
                         break;

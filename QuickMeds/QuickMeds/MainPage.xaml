@@ -2,18 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:QuickMeds"
-             x:Class="QuickMeds.MainPage">
+             x:Class="QuickMeds.MainPage"
+             Title="{x:Static local:Resources.AppResources.Title}">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
     </ContentPage.Padding>
-    <ScrollView>
-        <StackLayout VerticalOptions="Center">
-            <Image x:Name="headerImage" Aspect="AspectFill" />
-            <Label Text="{x:Static local:Resources.AppResources.Title}" StyleClass="h1" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
-            <Label Text="{x:Static local:Resources.AppResources.Subtitle}" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
-            <Label Text="{x:Static local:Resources.AppResources.UpdateYear}" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
-            <Button x:Name="medNameButton" Text="{x:Static local:Resources.AppResources.medNameButtonText}" HorizontalOptions="Fill" StyleClass="button" Clicked="MedNameButton_Clicked" />
-            <Button x:Name="conNameButton" Text="{x:Static local:Resources.AppResources.conNameButtonText}" HorizontalOptions="Fill" StyleClass="button" Clicked="ConNameButton_Clicked" />
-        </StackLayout>
-    </ScrollView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout VerticalOptions="Center">
+                <Image x:Name="headerImage" Aspect="AspectFill" />
+                <Label Text="{x:Static local:Resources.AppResources.Title}" StyleClass="h1" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
+                <Label Text="{x:Static local:Resources.AppResources.Subtitle}" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
+                <Label Text="{x:Static local:Resources.AppResources.UpdateYear}" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
+                <Button x:Name="medNameButton" Text="{x:Static local:Resources.AppResources.MedicationSearchTitle}" HorizontalOptions="Fill" StyleClass="button" Clicked="MedNameButton_Clicked" />
+                <Button x:Name="conNameButton" Text="{x:Static local:Resources.AppResources.ConditionSearchTitle}" HorizontalOptions="Fill" StyleClass="button" Clicked="ConNameButton_Clicked" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>

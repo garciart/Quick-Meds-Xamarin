@@ -61,38 +61,38 @@ namespace QuickMeds.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Search by Condition....
+        ///   Looks up a localized string similar to Press the key that matches the first letter of the patient&apos;s condition..
         /// </summary>
-        public static string conNameButtonText {
+        public static string ConditionSearchText {
             get {
-                return ResourceManager.GetString("conNameButtonText", resourceCulture);
+                return ResourceManager.GetString("ConditionSearchText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Press the key that matches the first letter of the patient&apos;s condition..
+        ///   Looks up a localized string similar to Search for a Condition.
         /// </summary>
-        public static string KeypadLabelCondition {
+        public static string ConditionSearchTitle {
             get {
-                return ResourceManager.GetString("KeypadLabelCondition", resourceCulture);
+                return ResourceManager.GetString("ConditionSearchTitle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Press the key that matches the first letter of the patient&apos;s medication..
         /// </summary>
-        public static string KeypadLabelMedication {
+        public static string MedicationSearchText {
             get {
-                return ResourceManager.GetString("KeypadLabelMedication", resourceCulture);
+                return ResourceManager.GetString("MedicationSearchText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Search for Medication....
+        ///   Looks up a localized string similar to Search for a Medication.
         /// </summary>
-        public static string medNameButtonText {
+        public static string MedicationSearchTitle {
             get {
-                return ResourceManager.GetString("medNameButtonText", resourceCulture);
+                return ResourceManager.GetString("MedicationSearchTitle", resourceCulture);
             }
         }
         

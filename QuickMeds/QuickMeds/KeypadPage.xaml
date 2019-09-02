@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="QuickMeds.KeypadPage">
+             xmlns:local="clr-namespace:QuickMeds"
+             x:Class="QuickMeds.KeypadPage"
+             Title="{x:Static local:Resources.AppResources.Title}">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
     </ContentPage.Padding>
     <ContentPage.Content>
-
         <StackLayout VerticalOptions="CenterAndExpand">
             <Label x:Name="KeypadLabel" HorizontalTextAlignment="Center" />
             <Grid HorizontalOptions="Center" VerticalOptions="Center">
@@ -21,6 +22,5 @@
                 <Button x:Name="YZ" CommandParameter="9" Text="YZ" Grid.Row="2" Grid.Column="2" Clicked="Button_Clicked" StyleClass="button" />
             </Grid>
         </StackLayout>
-
     </ContentPage.Content>
 </ContentPage>

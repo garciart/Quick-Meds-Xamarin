@@ -117,17 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="conNameButtonText" xml:space="preserve">
-    <value>Search by Condition...</value>
-  </data>
-  <data name="KeypadLabelCondition" xml:space="preserve">
+  <data name="ConditionSearchText" xml:space="preserve">
     <value>Press the key that matches the first letter of the patient's condition.</value>
   </data>
-  <data name="KeypadLabelMedication" xml:space="preserve">
+  <data name="ConditionSearchTitle" xml:space="preserve">
+    <value>Search for a Condition</value>
+  </data>
+  <data name="MedicationSearchText" xml:space="preserve">
     <value>Press the key that matches the first letter of the patient's medication.</value>
   </data>
-  <data name="medNameButtonText" xml:space="preserve">
-    <value>Search for Medication...</value>
+  <data name="MedicationSearchTitle" xml:space="preserve">
+    <value>Search for a Medication</value>
   </data>
   <data name="PressCheckText" xml:space="preserve">
     <value>You pressed {0}!</value>
