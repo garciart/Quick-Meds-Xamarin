@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using SQLite;
 
 namespace QuickMeds.Models {
     public class Medication {
+        [PrimaryKey, AutoIncrement]
         public int MedicationID { get; set; }
         public string GenericName { get; set; }
         public string BrandName { get; set; }
