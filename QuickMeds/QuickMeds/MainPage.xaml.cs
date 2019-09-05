@@ -23,6 +23,7 @@
  */
 
 using System;
+using System.IO;
 using Xamarin.Forms;
 
 namespace QuickMeds {
@@ -32,8 +33,17 @@ namespace QuickMeds {
      * @author Rob Garcia at rgarcia@rgprogramming.com
      */
     public partial class MainPage : ContentPage {
+
+        string _configFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "QuickMeds.config");
+
         public MainPage() {
             InitializeComponent();
+            if (File.Exists(_configFile)) {
+                
+            }
+            else {
+                DisplayAlert("Alert", "No configuration file found!", "OK");
+            }
             headerImage.Source = ImageSource.FromResource("QuickMeds.Assets.headerImage_v1.png");
         }
 

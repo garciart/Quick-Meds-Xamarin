@@ -11,4 +11,3 @@ namespace QuickMeds.Data {
 
     }
 }
-}
