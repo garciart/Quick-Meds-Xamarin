@@ -24,6 +24,7 @@
 
 using System;
 using System.IO;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace QuickMeds {
@@ -35,16 +36,24 @@ namespace QuickMeds {
     public partial class MainPage : ContentPage {
 
         string _configFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "QuickMeds.config");
+        static bool loadFlag = false;
 
         public MainPage() {
             InitializeComponent();
-            if (File.Exists(_configFile)) {
-                
-            }
-            else {
-                DisplayAlert("Alert", "No configuration file found!", "OK");
-            }
             headerImage.Source = ImageSource.FromResource("QuickMeds.Assets.headerImage_v1.png");
+        }
+
+        protected override void OnAppearing() {
+            if(loadFlag == false) {
+                if (File.Exists(_configFile)) {
+                    Application.Current.MainPage.DisplayAlert("Alert", "Found the configuration file!", "OK");
+                }
+                else {
+                    Application.Current.MainPage.DisplayAlert("Alert", "No configuration file found!", "OK");
+                }
+                loadFlag = true;
+            }
+            base.OnAppearing();
         }
 
         async void MedNameButton_Clicked(object sender, EventArgs e) {
