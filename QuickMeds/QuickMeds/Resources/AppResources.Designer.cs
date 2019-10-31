@@ -133,6 +133,15 @@ namespace QuickMeds.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Update the Database.
+        /// </summary>
+        public static string UpdateDatabaseTitle {
+            get {
+                return ResourceManager.GetString("UpdateDatabaseTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Updated for 2017.
         /// </summary>
         public static string UpdateYear {

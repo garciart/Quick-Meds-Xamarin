@@ -4,7 +4,7 @@ using System.Text;
 using SQLite;
 
 namespace QuickMeds.Models {
-    class Condition {
+    public class Condition {
         [PrimaryKey, AutoIncrement]
         public int ConditionID { get; set; }
         public string Name { get; set; }
