@@ -63,5 +63,9 @@ namespace QuickMeds {
         async void ConNameButton_Clicked(object sender, EventArgs e) {
             await Navigation.PushAsync(new KeypadPage(Constants.LookUpFlag.CONS));
         }
+
+        async void UpdateDatabaseButton_Clicked(object sender, EventArgs e) {
+            await this.DisplayAlert("Quick Meds", "You want to update the database!", "OK");
+        }
     }
 }

@@ -26,6 +26,7 @@ using System;
 using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using QuickMeds.Data;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace QuickMeds {
@@ -35,6 +36,18 @@ namespace QuickMeds {
      * @author Rob Garcia at rgarcia@rgprogramming.com
      */
     public partial class App : Application {
+
+        static DataFunctions database;
+
+        public static DataFunctions Database {
+            get {
+                if (database == null) {
+                    database = new DataFunctions(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Notes.db3"));
+                }
+                return database;
+            }
+        }
+
         public App() {
             InitializeComponent();
             MainPage = new NavigationPage(new MainPage());

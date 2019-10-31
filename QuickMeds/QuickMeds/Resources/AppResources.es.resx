@@ -149,6 +149,10 @@
     <value>QUICKMEDS PARA SEM</value>
     <comment>QUICKMEDS FOR EMS</comment>
   </data>
+  <data name="UpdateDatabaseTitle" xml:space="preserve">
+    <value>Actualizar la base de datos</value>
+    <comment>Update the Database</comment>
+  </data>
   <data name="UpdateYear" xml:space="preserve">
     <value>Actualizado para 2017</value>
     <comment>Updated for 2017</comment>
