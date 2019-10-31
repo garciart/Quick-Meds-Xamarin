@@ -79,6 +79,24 @@ namespace QuickMeds.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Could not download the database: {0}.
+        /// </summary>
+        public static string DownloadErrorMessage {
+            get {
+                return ResourceManager.GetString("DownloadErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Database downloaded and saved!.
+        /// </summary>
+        public static string DownloadSuccessMessage {
+            get {
+                return ResourceManager.GetString("DownloadSuccessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Press the key that matches the first letter of the patient&apos;s medication..
         /// </summary>
         public static string MedicationSearchText {

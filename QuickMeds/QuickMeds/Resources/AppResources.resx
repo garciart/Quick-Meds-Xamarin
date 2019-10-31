@@ -123,6 +123,12 @@
   <data name="ConditionSearchTitle" xml:space="preserve">
     <value>Search for a Condition</value>
   </data>
+  <data name="DownloadErrorMessage" xml:space="preserve">
+    <value>Could not download the database: {0}</value>
+  </data>
+  <data name="DownloadSuccessMessage" xml:space="preserve">
+    <value>Database downloaded and saved!</value>
+  </data>
   <data name="MedicationSearchText" xml:space="preserve">
     <value>Press the key that matches the first letter of the patient's medication.</value>
   </data>

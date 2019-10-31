@@ -22,6 +22,7 @@
  * THE SOFTWARE.
  */
 
+using QuickMeds.Common;
 using QuickMeds.Resources;
 using System;
 using Xamarin.Forms;
