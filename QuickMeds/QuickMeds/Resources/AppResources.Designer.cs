@@ -61,6 +61,15 @@ namespace QuickMeds.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to About Quick Meds....
+        /// </summary>
+        public static string AboutTitle {
+            get {
+                return ResourceManager.GetString("AboutTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Press the key that matches the first letter of the patient&apos;s condition..
         /// </summary>
         public static string ConditionSearchText {

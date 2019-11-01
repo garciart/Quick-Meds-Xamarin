@@ -16,7 +16,7 @@
                 <Label Text="{x:Static local:Resources.AppResources.UpdateYear}" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
                 <Button x:Name="medNameButton" Text="{x:Static local:Resources.AppResources.MedicationSearchTitle}" HorizontalOptions="Fill" StyleClass="button" Clicked="MedNameButton_Clicked" />
                 <Button x:Name="conNameButton" Text="{x:Static local:Resources.AppResources.ConditionSearchTitle}" HorizontalOptions="Fill" StyleClass="button" Clicked="ConNameButton_Clicked" />
-                <Button x:Name="updateDatabaseButton" Text="{x:Static local:Resources.AppResources.UpdateDatabaseTitle}" HorizontalOptions="Fill" StyleClass="button" Clicked="UpdateDatabaseButton_Clicked" />
+                <Button x:Name="AboutButton" Text="{x:Static local:Resources.AppResources.AboutTitle}" StyleClass="button" Clicked="AboutButton_Clicked" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
