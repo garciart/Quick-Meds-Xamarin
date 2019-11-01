@@ -64,20 +64,9 @@ namespace QuickMeds {
         async void ConNameButton_Clicked(object sender, EventArgs e) {
             await Navigation.PushAsync(new KeypadPage(Constants.LookUpFlag.CONS));
         }
-
-        private async void UpdateDatabaseButton_Clicked(object sender, EventArgs e) {
-            // await this.DisplayAlert("Quick Meds", "You want to update the database!", "OK");
-            string databaseFile = "medications.db";
-            string databaseURL = "https://raw.githubusercontent.com/garciart/QuickMeds/master/Database/" + databaseFile;
-            try {
-                byte[] returnedBytes = await AppFunctions.DownloadFileAsync(databaseURL);
-                File.WriteAllBytes(String.Format("{0}/{1}", Constants.AppDataPath, databaseFile), returnedBytes);
-                await this.DisplayAlert("Quick Meds", AppResources.DownloadSuccessMessage, "OK");
-                await Application.Current.MainPage.Navigation.PopAsync();
-            }
-            catch (Exception ex) {
-                await this.DisplayAlert("Quick Meds", String.Format(AppResources.DownloadErrorMessage, ex.Message), "OK");
-            }
+        
+        private async void AboutButton_Clicked(object sender, EventArgs e) {
+            await Navigation.PushAsync(new AboutPage());
         }
     }
 }

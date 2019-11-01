@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutTitle" xml:space="preserve">
+    <value>Sobre Quick Meds...</value>
+    <comment>About Quick Meds...</comment>
+  </data>
   <data name="ConditionSearchText" xml:space="preserve">
     <value>Presione la tecla que coincida con la primera letra de la condición del paciente.</value>
     <comment>Press the key that matches the first letter of the patient's condition.</comment>
