@@ -9,6 +9,7 @@ namespace QuickMeds {
         public AboutPage() {
             InitializeComponent();
             headerImage.Source = ImageSource.FromResource("QuickMeds.Assets.headerImage_v1.png");
+            CopyrightLabel.Text = String.Format(AppResources.CopyrightLabel, DateTime.Now.Year.ToString());
         }
 
         private async void UpdateDatabaseButton_Clicked(object sender, EventArgs e) {

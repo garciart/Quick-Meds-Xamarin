@@ -7,11 +7,22 @@
              mc:Ignorable="d"
              x:Class="QuickMeds.AboutPage"
              Title="{x:Static local:Resources.AppResources.AboutTitle}">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
+    </ContentPage.Padding>
     <ContentPage.Content>
-        <StackLayout>
-            <Image x:Name="headerImage" Aspect="AspectFill" />
-            <Label Text="About Quick Meds..." VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Button x:Name="updateDatabaseButton" Text="{x:Static local:Resources.AppResources.UpdateDatabaseTitle}" HorizontalOptions="Fill" StyleClass="button" Clicked="UpdateDatabaseButton_Clicked" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <Image x:Name="headerImage" Aspect="AspectFill" />
+                <Label Text="{x:Static local:Resources.AppResources.AboutLabel1}" StyleClass="h1" />
+                <Label x:Name="CopyrightLabel" />
+                <BoxView StyleClass="hr" />
+                <Label Text="{x:Static local:Resources.AppResources.AboutLabel2}" />
+                <BoxView StyleClass="hr" />
+                <Label Text="{x:Static local:Resources.AppResources.AboutLabel3}" />
+                <BoxView StyleClass="hr" />
+                <Button x:Name="updateDatabaseButton" Text="{x:Static local:Resources.AppResources.UpdateDatabaseTitle}" HorizontalOptions="Fill" StyleClass="button" Clicked="UpdateDatabaseButton_Clicked" />
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

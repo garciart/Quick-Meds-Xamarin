@@ -9,7 +9,7 @@
     </ContentPage.Padding>
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand">
-            <Label x:Name="KeypadLabel" HorizontalTextAlignment="Center" />
+            <Label x:Name="KeypadLabel" StyleClass="h1" HorizontalTextAlignment="Center" />
             <Grid HorizontalOptions="Center" VerticalOptions="Center">
                 <Button x:Name="ABC" CommandParameter="1" Text="ABC" Grid.Row="0" Grid.Column="0" Clicked="Button_Clicked" StyleClass="button" />
                 <Button x:Name="DEF" CommandParameter="2" Text="DEF" Grid.Row="0" Grid.Column="1" Clicked="Button_Clicked" StyleClass="button" />
