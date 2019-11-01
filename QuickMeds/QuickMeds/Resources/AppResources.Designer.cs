@@ -61,6 +61,33 @@ namespace QuickMeds.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to QUICK MEDS® VERSION 2.0.
+        /// </summary>
+        public static string AboutLabel1 {
+            get {
+                return ResourceManager.GetString("AboutLabel1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quick Meds® is a quick prescription medication reference for Emergency Medical Service (EMS) providers..
+        /// </summary>
+        public static string AboutLabel2 {
+            get {
+                return ResourceManager.GetString("AboutLabel2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warning: This computer program is protected by copyright law and international treaties. Unauthorized reproduction or distribution of this program, or any portion of it, may result in severe civil or criminal penalties, and will be prosecuted under the maximum extent possible under law..
+        /// </summary>
+        public static string AboutLabel3 {
+            get {
+                return ResourceManager.GetString("AboutLabel3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to About Quick Meds....
         /// </summary>
         public static string AboutTitle {
@@ -84,6 +111,15 @@ namespace QuickMeds.Resources {
         public static string ConditionSearchTitle {
             get {
                 return ResourceManager.GetString("ConditionSearchTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copyright © 2017-{0} Rob Garcia. All rights reserved..
+        /// </summary>
+        public static string CopyrightLabel {
+            get {
+                return ResourceManager.GetString("CopyrightLabel", resourceCulture);
             }
         }
         

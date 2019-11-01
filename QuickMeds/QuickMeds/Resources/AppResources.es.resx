@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutLabel1" xml:space="preserve">
+    <value>QUICK MEDS® VERSIÓN 2.0</value>
+    <comment>QUICK MEDS® VERSION 2.0</comment>
+  </data>
+  <data name="AboutLabel2" xml:space="preserve">
+    <value>Quick Meds® es una referencia rápida de medicamentos recetados para los proveedores de Servicios de Emergencias Médicas (SEM).</value>
+    <comment>Quick Meds® is a quick prescription medication reference for Emergency Medical Service (EMS) providers.</comment>
+  </data>
+  <data name="AboutLabel3" xml:space="preserve">
+    <value>Advertencia: este programa de computadora está protegido por las leyes de derechos de autor y los tratados internacionales. La reproducción o distribución no autorizada de este programa, o cualquier parte de él, puede resultar en severas sanciones civiles o penales, y será procesada en la mayor medida posible bajo la ley.</value>
+    <comment>Warning: This computer program is protected by copyright law and international treaties. Unauthorized reproduction or distribution of this program, or any portion of it, may result in severe civil or criminal penalties, and will be prosecuted under the maximum extent possible under law.</comment>
+  </data>
   <data name="AboutTitle" xml:space="preserve">
     <value>Sobre Quick Meds...</value>
     <comment>About Quick Meds...</comment>
@@ -128,6 +140,10 @@
   <data name="ConditionSearchTitle" xml:space="preserve">
     <value>Busca una condición</value>
     <comment>Search for a Condition</comment>
+  </data>
+  <data name="CopyrightLabel" xml:space="preserve">
+    <value>Derechos de autor © 2017-{0} Rob Garcia. Todos los derechos reservados.</value>
+    <comment>Copyright © 2017-{0} Rob Garcia. All rights reserved.</comment>
   </data>
   <data name="DownloadErrorMessage" xml:space="preserve">
     <value>No se pudo descargar y guardar la base de datos: {0}</value>

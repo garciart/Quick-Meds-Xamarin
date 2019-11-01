@@ -1,4 +1,5 @@
 # Project Quick Medication Reference (QMeds)
+<p align="center"><img src="/Images/qmeds_image_01.png" alt="Welcome to Quick Meds!" width="200" /></p>
 The Quick Medication Reference allows EMS providers in the field to quickly identify commonly-prescribed medications to extrapolate patient histories and provide rapid and correct care.
 <h2>Table of Contents:</h2>
 <ul>

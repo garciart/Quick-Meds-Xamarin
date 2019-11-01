@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:QuickMeds"
              x:Class="QuickMeds.MainPage"
+             xmlns:local="clr-namespace:QuickMeds"
              Title="{x:Static local:Resources.AppResources.Title}">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
     </ContentPage.Padding>
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout VerticalOptions="Center">
+        <ScrollView x:Name="MainScrollView">
+            <StackLayout Padding="10" VerticalOptions="Center">
                 <Image x:Name="headerImage" Aspect="AspectFill" />
                 <Label Text="{x:Static local:Resources.AppResources.Title}" StyleClass="h1" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
                 <Label Text="{x:Static local:Resources.AppResources.Subtitle}" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
-                <Label Text="{x:Static local:Resources.AppResources.UpdateYear}" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
+                <Label Text="{x:Static local:Resources.AppResources.UpdateYear}" StyleClass="h2" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
                 <Button x:Name="medNameButton" Text="{x:Static local:Resources.AppResources.MedicationSearchTitle}" HorizontalOptions="Fill" StyleClass="button" Clicked="MedNameButton_Clicked" />
                 <Button x:Name="conNameButton" Text="{x:Static local:Resources.AppResources.ConditionSearchTitle}" HorizontalOptions="Fill" StyleClass="button" Clicked="ConNameButton_Clicked" />
                 <Button x:Name="AboutButton" Text="{x:Static local:Resources.AppResources.AboutTitle}" StyleClass="button" Clicked="AboutButton_Clicked" />
