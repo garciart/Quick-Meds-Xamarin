@@ -13,8 +13,8 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="10">
-                <Image x:Name="headerImage" Aspect="AspectFill" />
                 <Label Text="{x:Static local:Resources.AppResources.AboutLabel1}" StyleClass="h1" />
+                <Image x:Name="headerImage" Aspect="AspectFill" />
                 <Label x:Name="CopyrightLabel" />
                 <BoxView StyleClass="hr" />
                 <Label Text="{x:Static local:Resources.AppResources.AboutLabel2}" />
