@@ -10,8 +10,8 @@
     <ContentPage.Content>
         <ScrollView x:Name="MainScrollView">
             <StackLayout Padding="10" VerticalOptions="Center">
-                <Image x:Name="headerImage" Aspect="AspectFill" />
                 <Label Text="{x:Static local:Resources.AppResources.Title}" StyleClass="h1" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
+                <Image x:Name="headerImage" Aspect="AspectFill" />
                 <Label Text="{x:Static local:Resources.AppResources.Subtitle}" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
                 <Label Text="{x:Static local:Resources.AppResources.UpdateYear}" StyleClass="h2" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
                 <Button x:Name="medNameButton" Text="{x:Static local:Resources.AppResources.MedicationSearchTitle}" HorizontalOptions="Fill" StyleClass="button" Clicked="MedNameButton_Clicked" />

@@ -23,7 +23,6 @@
  */
 
 using QuickMeds.Common;
-using QuickMeds.Resources;
 using System;
 using System.IO;
 using Xamarin.Forms;

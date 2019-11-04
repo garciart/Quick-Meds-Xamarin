@@ -1,7 +1,7 @@
 ﻿/*
  * The MIT License
  *
- * Copyright 2018 Rob Garcia at rgarcia@rgprogramming.com.
+ * Copyright 2019 Rob Garcia at rgarcia@rgprogramming.com.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,48 +21,22 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+using System.Collections.Generic;
 
-using System;
-using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using QuickMeds.Data;
 
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace QuickMeds {
-    /**
-     * Application controller page
-     *
-     * @author Rob Garcia at rgarcia@rgprogramming.com
-     */
-    public partial class App : Application {
-
-        static DataFunctions database;
-
-        public static DataFunctions Database {
-            get {
-                if (database == null) {
-                    database = new DataFunctions(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "medications.db"));
-                }
-                return database;
-            }
-        }
-
-        public App() {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class MedicationListPage : ContentPage {
+        public MedicationListPage() {
             InitializeComponent();
-            MainPage = new NavigationPage(new MainPage());
         }
 
-        protected override void OnStart() {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep() {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume() {
-            // Handle when your app resumes
+        protected override async void OnAppearing() {
+            base.OnAppearing();
+            List<QuickMeds.Models.MEDICATIONS> l = await App.Database.GetMedicationsAsync();
+            listView.ItemsSource = await App.Database.GetMedicationsAsync();
         }
     }
 }

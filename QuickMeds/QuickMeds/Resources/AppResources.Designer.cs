@@ -97,6 +97,24 @@ namespace QuickMeds.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        public static string ButtonNo {
+            get {
+                return ResourceManager.GetString("ButtonNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes.
+        /// </summary>
+        public static string ButtonYes {
+            get {
+                return ResourceManager.GetString("ButtonYes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Press the key that matches the first letter of the patient&apos;s condition..
         /// </summary>
         public static string ConditionSearchText {
@@ -138,6 +156,15 @@ namespace QuickMeds.Resources {
         public static string DownloadSuccessMessage {
             get {
                 return ResourceManager.GetString("DownloadSuccessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Medications.
+        /// </summary>
+        public static string MedicationListTitle {
+            get {
+                return ResourceManager.GetString("MedicationListTitle", resourceCulture);
             }
         }
         
@@ -192,6 +219,15 @@ namespace QuickMeds.Resources {
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to update the current database?.
+        /// </summary>
+        public static string UpdateConfirm {
+            get {
+                return ResourceManager.GetString("UpdateConfirm", resourceCulture);
             }
         }
         
