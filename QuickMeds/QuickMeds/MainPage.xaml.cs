@@ -35,7 +35,7 @@ namespace QuickMeds {
      */
     public partial class MainPage : ContentPage {
 
-        string _configFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "QuickMeds.config");
+        // string _configFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "QuickMeds.config");
         static bool loadFlag = false;
 
         public MainPage() {
@@ -44,6 +44,7 @@ namespace QuickMeds {
         }
 
         protected override void OnAppearing() {
+            /*
             if(loadFlag == false) {
                 if (File.Exists(_configFile)) {
                     Application.Current.MainPage.DisplayAlert("Alert", "Found the configuration file!", "OK");
@@ -53,6 +54,7 @@ namespace QuickMeds {
                 }
                 loadFlag = true;
             }
+            */
             base.OnAppearing();
         }
 
@@ -63,7 +65,7 @@ namespace QuickMeds {
         async void ConNameButton_Clicked(object sender, EventArgs e) {
             await Navigation.PushAsync(new KeypadPage(Constants.LookUpFlag.CONS));
         }
-        
+
         private async void AboutButton_Clicked(object sender, EventArgs e) {
             await Navigation.PushAsync(new AboutPage());
         }

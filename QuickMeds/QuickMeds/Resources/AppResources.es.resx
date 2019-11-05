@@ -162,8 +162,8 @@
     <comment>Database downloaded and saved!</comment>
   </data>
   <data name="MedicationListTitle" xml:space="preserve">
-    <value>Medicamentos</value>
-    <comment>Medications</comment>
+    <value>Lista de medicamentos</value>
+    <comment>Medications List</comment>
   </data>
   <data name="MedicationSearchText" xml:space="preserve">
     <value>Presione la tecla que coincida con la primera letra del medicamento del paciente.</value>
