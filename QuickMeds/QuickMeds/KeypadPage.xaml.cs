@@ -87,7 +87,7 @@ namespace QuickMeds {
                     }
             }
             await this.DisplayAlert(AppResources.PressCheckTitle, (String.Format(AppResources.PressCheckText, letterGroup)), "OK");
-            await Navigation.PushAsync(new MedicationListPage());
+            await Navigation.PushAsync(new MedicationListPage(letterGroup));
             /*
             if (((Button)sender).Equals(ABC)) {
                 await this.DisplayAlert("Press Check!", "You pressed Button 1!", "OK");

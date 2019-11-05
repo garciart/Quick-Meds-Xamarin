@@ -160,7 +160,7 @@ namespace QuickMeds.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Medications.
+        ///   Looks up a localized string similar to Medications List.
         /// </summary>
         public static string MedicationListTitle {
             get {

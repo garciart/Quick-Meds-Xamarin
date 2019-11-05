@@ -151,7 +151,7 @@
     <value>Database downloaded and saved!</value>
   </data>
   <data name="MedicationListTitle" xml:space="preserve">
-    <value>Medications</value>
+    <value>Medications List</value>
   </data>
   <data name="MedicationSearchText" xml:space="preserve">
     <value>Press the key that matches the first letter of the patient's medication.</value>

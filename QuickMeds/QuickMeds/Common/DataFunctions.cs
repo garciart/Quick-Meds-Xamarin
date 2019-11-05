@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using SQLite;
 using QuickMeds.Models;
 using Action = QuickMeds.Models.Action;
+using System.Linq;
 
 namespace QuickMeds.Data {
     public class DataFunctions {
@@ -23,6 +24,13 @@ namespace QuickMeds.Data {
             return _database.Table<MEDICATIONS>()
                             .Where(i => i.MEDID == MEDID)
                             .FirstOrDefaultAsync();
+        }
+
+        public Task<List<MEDICATIONS>> GetMedicationsByInitialAsync(string letterGroup) {
+            string[] stringArray = letterGroup.Split();
+            return _database.Table<MEDICATIONS>()
+                            .Where(i => i.BNAME.StartsWith(stringArray[0]) || i.GNAME.StartsWith(stringArray[0]))
+                            .ToListAsync();
         }
 
         public Task<List<Condition>> GetConditionsAsync() {
