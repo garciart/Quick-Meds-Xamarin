@@ -38,8 +38,8 @@ namespace QuickMeds {
 
         protected override async void OnAppearing() {
             base.OnAppearing();
-            List<MEDICATIONS> l = await App.Database.GetMedicationsAsync();
-            listView.ItemsSource = await App.Database.GetMedicationsInGroup(group);
+            // List<MEDICATIONS> l = await App.Database.GetMedicationsAsync();
+            listView.ItemsSource = await App.Database.GetMedicationsList(group);
         }
     }
 }
