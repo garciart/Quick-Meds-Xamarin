@@ -44,7 +44,8 @@ namespace QuickMeds {
 
         async void Button_Clicked(object sender, EventArgs e) {
             string letterGroup = "";
-            switch (((Button)sender).CommandParameter) {
+            var group = ((Button)sender).CommandParameter;
+            switch (group) {
                 case "1": {
                         letterGroup = "ABC";
                         break;
@@ -87,7 +88,7 @@ namespace QuickMeds {
                     }
             }
             await this.DisplayAlert(AppResources.PressCheckTitle, (String.Format(AppResources.PressCheckText, letterGroup)), "OK");
-            await Navigation.PushAsync(new MedicationListPage(letterGroup));
+            await Navigation.PushAsync(new MedicationListPage(group));
             /*
             if (((Button)sender).Equals(ABC)) {
                 await this.DisplayAlert("Press Check!", "You pressed Button 1!", "OK");
