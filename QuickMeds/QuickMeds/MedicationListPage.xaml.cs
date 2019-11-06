@@ -30,16 +30,16 @@ using QuickMeds.Models;
 namespace QuickMeds {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MedicationListPage : ContentPage {
-        private string letterGroup;
-        public MedicationListPage(string letterGroup) {
+        private object group;
+        public MedicationListPage(object group) {
             InitializeComponent();
-            this.letterGroup = letterGroup;
+            this.group = group;
         }
 
         protected override async void OnAppearing() {
             base.OnAppearing();
             List<MEDICATIONS> l = await App.Database.GetMedicationsAsync();
-            listView.ItemsSource = await App.Database.GetMedicationsByInitialAsync(letterGroup);
+            listView.ItemsSource = await App.Database.GetMedicationsInGroup(group);
         }
     }
 }
