@@ -14,7 +14,7 @@
         <ListView x:Name="listView" Margin="20">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding MedicationName}" Detail="Yo!" />
+                    <TextCell Text="{Binding MedicationListItem}" Detail="Yo!" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

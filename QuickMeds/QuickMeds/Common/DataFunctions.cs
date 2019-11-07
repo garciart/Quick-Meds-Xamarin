@@ -27,8 +27,23 @@ namespace QuickMeds.Data {
         }
 
         public Task<List<MedicationsList>> GetMedicationsList(object group) {
-            Task<List<MedicationsList>> l = _database.QueryAsync<MedicationsList>("SELECT BNAME AS MedicationName, GNAME AS MedicationAKA FROM [MEDICATIONS] WHERE BNAME LIKE 'A%';");
-            Task<List<MedicationsList>> m = _database.QueryAsync<MedicationsList>("SELECT GNAME AS MedicationName, BNAME AS MedicationAKA FROM [MEDICATIONS] WHERE GNAME LIKE 'A%';");
+            foreach(object g in group) {
+
+            }
+
+            Task<List<MedicationsList>> l = _database.QueryAsync<MedicationsList>(
+                "SELECT BNAME AS MedicationName, 'B' AS MedicationType, GNAME AS MedicationAKA FROM [MEDICATIONS] WHERE BNAME LIKE 'A%' " +
+                "UNION " +
+                "SELECT GNAME AS MedicationName, 'G' AS MedicationType, BNAME AS MedicationAKA FROM [MEDICATIONS] WHERE GNAME LIKE 'A%' " +
+                "UNION " +
+                "SELECT BNAME AS MedicationName, 'B' AS MedicationType, GNAME AS MedicationAKA FROM [MEDICATIONS] WHERE BNAME LIKE 'B%' " +
+                "UNION " +
+                "SELECT GNAME AS MedicationName, 'G' AS MedicationType, BNAME AS MedicationAKA FROM [MEDICATIONS] WHERE GNAME LIKE 'B%' " +
+                "UNION " +
+                "SELECT BNAME AS MedicationName, 'B' AS MedicationType, GNAME AS MedicationAKA FROM [MEDICATIONS] WHERE BNAME LIKE 'C%' " +
+                "UNION " +
+                "SELECT GNAME AS MedicationName, 'G' AS MedicationType, BNAME AS MedicationAKA FROM [MEDICATIONS] WHERE GNAME LIKE 'C%' " +
+                "ORDER BY MedicationName ASC;");
             return l;
         }
 
