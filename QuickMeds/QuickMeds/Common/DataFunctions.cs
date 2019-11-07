@@ -26,91 +26,21 @@ namespace QuickMeds.Data {
                             .FirstOrDefaultAsync();
         }
 
-        public Task<List<MedicationsList>> GetMedicationsList(object group) {
-            foreach(object g in group) {
-
+        public Task<List<MedicationList>> GetMedicationListByGroup(string letterGroup) {
+            Task<List<MedicationList>> l;
+            string query = "";
+            foreach (char c in letterGroup) {
+                query += "SELECT BNAME AS MedicationName, 'B' AS MedicationType, GNAME AS MedicationAKA, BTFLAG AS MedicationBTFlag " +
+                    "FROM [MEDICATIONS] WHERE BNAME LIKE '" + c + "%' " + 
+                    "UNION " +
+                    "SELECT GNAME AS MedicationName, 'G' AS MedicationType, BNAME AS MedicationAKA, BTFLAG AS MedicationBTFlag " +
+                    "FROM [MEDICATIONS] WHERE GNAME LIKE '" + c + "%' " +
+                    "UNION ";
             }
-
-            Task<List<MedicationsList>> l = _database.QueryAsync<MedicationsList>(
-                "SELECT BNAME AS MedicationName, 'B' AS MedicationType, GNAME AS MedicationAKA FROM [MEDICATIONS] WHERE BNAME LIKE 'A%' " +
-                "UNION " +
-                "SELECT GNAME AS MedicationName, 'G' AS MedicationType, BNAME AS MedicationAKA FROM [MEDICATIONS] WHERE GNAME LIKE 'A%' " +
-                "UNION " +
-                "SELECT BNAME AS MedicationName, 'B' AS MedicationType, GNAME AS MedicationAKA FROM [MEDICATIONS] WHERE BNAME LIKE 'B%' " +
-                "UNION " +
-                "SELECT GNAME AS MedicationName, 'G' AS MedicationType, BNAME AS MedicationAKA FROM [MEDICATIONS] WHERE GNAME LIKE 'B%' " +
-                "UNION " +
-                "SELECT BNAME AS MedicationName, 'B' AS MedicationType, GNAME AS MedicationAKA FROM [MEDICATIONS] WHERE BNAME LIKE 'C%' " +
-                "UNION " +
-                "SELECT GNAME AS MedicationName, 'G' AS MedicationType, BNAME AS MedicationAKA FROM [MEDICATIONS] WHERE GNAME LIKE 'C%' " +
-                "ORDER BY MedicationName ASC;");
+            query = query.Substring(0, query.LastIndexOf("UNION "));
+            query += "ORDER BY MedicationName ASC;";
+            l = _database.QueryAsync<MedicationList>(query);
             return l;
-        }
-
-        public Task<List<MEDICATIONS>> GetMedicationsByInitialAsync(string letterGroup) {
-            string[] stringArray = letterGroup.Split();
-            return _database.QueryAsync<MEDICATIONS>("SELECT * FROM [MEDICATIONS] WHERE BNAME LIKE 'A%' OR GNAME LIKE 'A%';");
-        }
-
-        public Task<List<MEDICATIONS>> GetMedicationsInGroup(object group) {
-            switch (group) {
-                case "1": {
-                        return _database.QueryAsync<MEDICATIONS>("SELECT * FROM [MEDICATIONS] WHERE" +
-                            "BNAME LIKE 'A%' OR GNAME LIKE 'A%' OR " +
-                            "BNAME LIKE 'B%' OR GNAME LIKE 'B%' OR " +
-                            "BNAME LIKE 'C%' OR GNAME LIKE 'C%' ORDER BY BNAME, GNAME ASC;");
-                    }
-                case "2": {
-                        return _database.QueryAsync<MEDICATIONS>("SELECT * FROM [MEDICATIONS] WHERE " +
-                            "BNAME LIKE 'D%' OR GNAME LIKE 'D%' OR " +
-                            "BNAME LIKE 'E%' OR GNAME LIKE 'E%' OR " +
-                            "BNAME LIKE 'F%' OR GNAME LIKE 'F%' ORDER BY BNAME, GNAME ASC;");
-                    }
-                case "3": {
-                        return _database.QueryAsync<MEDICATIONS>("SELECT * FROM [MEDICATIONS] WHERE " +
-                            "BNAME LIKE 'G%' OR GNAME LIKE 'G%' OR " +
-                            "BNAME LIKE 'H%' OR GNAME LIKE 'H%' OR " +
-                            "BNAME LIKE 'I%' OR GNAME LIKE 'I%' ORDER BY BNAME, GNAME ASC;");
-                    }
-                case "4": {
-                        return _database.QueryAsync<MEDICATIONS>("SELECT * FROM [MEDICATIONS] WHERE " +
-                            "BNAME LIKE 'J%' OR GNAME LIKE 'J%' OR " +
-                            "BNAME LIKE 'K%' OR GNAME LIKE 'K%' OR " +
-                            "BNAME LIKE 'L%' OR GNAME LIKE 'L%' ORDER BY BNAME, GNAME ASC;");
-                    }
-                case "5": {
-                        return _database.QueryAsync<MEDICATIONS>("SELECT * FROM [MEDICATIONS] WHERE " +
-                            "BNAME LIKE 'M%' OR GNAME LIKE 'M%' OR " +
-                            "BNAME LIKE 'N%' OR GNAME LIKE 'N%' OR " +
-                            "BNAME LIKE 'O%' OR GNAME LIKE 'O%' ORDER BY BNAME, GNAME ASC;");
-                    }
-                case "6": {
-                        return _database.QueryAsync<MEDICATIONS>("SELECT * FROM [MEDICATIONS] WHERE " +
-                            "BNAME LIKE 'P%' OR GNAME LIKE 'P%' OR " +
-                            "BNAME LIKE 'Q%' OR GNAME LIKE 'Q%' OR " +
-                            "BNAME LIKE 'R%' OR GNAME LIKE 'R%' ORDER BY BNAME, GNAME ASC;");
-                    }
-                case "7": {
-                        return _database.QueryAsync<MEDICATIONS>("SELECT * FROM [MEDICATIONS] WHERE " +
-                            "BNAME LIKE 'S%' OR GNAME LIKE 'S%' OR " +
-                            "BNAME LIKE 'T%' OR GNAME LIKE 'T%' OR " +
-                            "BNAME LIKE 'U%' OR GNAME LIKE 'U%' ORDER BY BNAME, GNAME ASC;");
-                    }
-                case "8": {
-                        return _database.QueryAsync<MEDICATIONS>("SELECT * FROM [MEDICATIONS] WHERE " +
-                            "BNAME LIKE 'V%' OR GNAME LIKE 'V%' OR " +
-                            "BNAME LIKE 'W%' OR GNAME LIKE 'W%' OR " +
-                            "BNAME LIKE 'X%' OR GNAME LIKE 'X%' ORDER BY BNAME, GNAME ASC;");
-                    }
-                case "9": {
-                        return _database.QueryAsync<MEDICATIONS>("SELECT * FROM [MEDICATIONS] WHERE" +
-                            "BNAME LIKE 'Y%' OR GNAME LIKE 'Y%' OR " +
-                            "BNAME LIKE 'Z%' OR GNAME LIKE 'Z%' ORDER BY BNAME, GNAME ASC;");
-                    }
-                default: {
-                        return null;
-                    }
-            }
         }
 
         public Task<List<Condition>> GetConditionsAsync() {

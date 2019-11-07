@@ -11,10 +11,34 @@
         <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
     </ContentPage.Padding>
     <ContentPage.Content>
-        <ListView x:Name="listView" Margin="20">
+        <ListView x:Name="listView" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding MedicationListItem}" Detail="Yo!" />
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout>
+                                <StackLayout.Triggers>
+                                    <DataTrigger TargetType="StackLayout" Binding="{Binding MedicationBTFlag}" Value="1">
+                                        <Setter Property="BackgroundColor" Value="Red" />
+                                    </DataTrigger>
+                                </StackLayout.Triggers>
+                                <Label Text="{Binding MedicationListItem}" >
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding MedicationBTFlag}" Value="1">
+                                            <Setter Property="TextColor" Value="White"/>
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                                <Label Text="{Binding MedicationType}">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding MedicationBTFlag}" Value="1">
+                                            <Setter Property="TextColor" Value="White"/>
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
