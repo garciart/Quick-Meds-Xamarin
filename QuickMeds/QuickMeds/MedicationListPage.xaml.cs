@@ -26,20 +26,20 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using QuickMeds.Models;
+using System.Threading.Tasks;
 
 namespace QuickMeds {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MedicationListPage : ContentPage {
-        private object group;
-        public MedicationListPage(object group) {
+        private string letterGroup;
+        public MedicationListPage(string letterGroup) {
             InitializeComponent();
-            this.group = group;
+            this.letterGroup = letterGroup;
         }
 
         protected override async void OnAppearing() {
             base.OnAppearing();
-            // List<MEDICATIONS> l = await App.Database.GetMedicationsAsync();
-            listView.ItemsSource = await App.Database.GetMedicationsList(group);
+            listView.ItemsSource = await App.Database.GetMedicationListByGroup(letterGroup);
         }
     }
 }
