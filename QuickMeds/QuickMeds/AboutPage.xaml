@@ -14,14 +14,21 @@
         <ScrollView>
             <StackLayout Padding="10">
                 <Label Text="{x:Static local:Resources.AppResources.AboutLabel1}" StyleClass="h1" />
-                <Image x:Name="headerImage" Aspect="AspectFill" />
+                <Image x:Name="HeaderImage" Aspect="AspectFill" />
                 <Label x:Name="CopyrightLabel" />
                 <BoxView StyleClass="hr" />
                 <Label Text="{x:Static local:Resources.AppResources.AboutLabel2}" />
                 <BoxView StyleClass="hr" />
                 <Label Text="{x:Static local:Resources.AppResources.AboutLabel3}" />
                 <BoxView StyleClass="hr" />
-                <Button x:Name="updateDatabaseButton" Text="{x:Static local:Resources.AppResources.UpdateDatabaseTitle}" HorizontalOptions="Fill" StyleClass="button" Clicked="UpdateDatabaseButton_Clicked" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="BackButton" Text="{x:Static local:Resources.AppResources.ButtonBack}" StyleClass="button" Clicked="BackButton_Clicked"  Grid.Column="0" />
+                    <Button x:Name="UpdateDatabaseButton" Text="{x:Static local:Resources.AppResources.UpdateDatabaseTitle}" HorizontalOptions="Fill" StyleClass="button" Clicked="UpdateDatabaseButton_Clicked"  Grid.Column="1" />
+                </Grid>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
