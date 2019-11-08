@@ -8,7 +8,7 @@ namespace QuickMeds {
     public partial class AboutPage : ContentPage {
         public AboutPage() {
             InitializeComponent();
-            headerImage.Source = ImageSource.FromResource("QuickMeds.Assets.headerImage_v1.png");
+            HeaderImage.Source = ImageSource.FromResource("QuickMeds.Assets.headerImage_v1.png");
             CopyrightLabel.Text = string.Format(AppResources.CopyrightLabel, DateTime.Now.Year.ToString());
         }
 
@@ -27,6 +27,11 @@ namespace QuickMeds {
                     await this.DisplayAlert("Quick Meds", string.Format(AppResources.DownloadErrorMessage, ex.Message), "OK");
                 }
             }
+        }
+
+        private async void BackButton_Clicked(object sender, EventArgs e) {
+            await Application.Current.MainPage.Navigation.PopAsync();
+            Navigation.RemovePage(this);
         }
     }
 }

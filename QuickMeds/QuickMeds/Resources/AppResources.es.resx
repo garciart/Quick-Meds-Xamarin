@@ -133,6 +133,10 @@
     <value>Sobre Quick Meds...</value>
     <comment>About Quick Meds...</comment>
   </data>
+  <data name="ButtonBack" xml:space="preserve">
+    <value>Atrás</value>
+    <comment>Back</comment>
+  </data>
   <data name="ButtonNo" xml:space="preserve">
     <value>No</value>
     <comment>No</comment>
