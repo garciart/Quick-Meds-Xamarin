@@ -1,10 +1,9 @@
 ﻿using SQLite;
 
 namespace QuickMeds.Models {
-    public class Condition {
+    public class ActionClass {
         [PrimaryKey, AutoIncrement]
-        public int ConditionID { get; set; }
+        public int ActionClassID { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
     }
 }

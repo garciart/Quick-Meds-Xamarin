@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using QuickMeds.Models;
 using SQLite;
-using QuickMeds.Models;
-using Action = QuickMeds.Models.Action;
-using System.Linq;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace QuickMeds.Data {
     public class DataFunctions {
@@ -20,9 +16,9 @@ namespace QuickMeds.Data {
             return _database.Table<Medication>().ToListAsync();
         }
 
-        public Task<Medication> GetMedicationsAsync(int Medication_ID) {
+        public Task<Medication> GetMedicationsAsync(int medicationID) {
             return _database.Table<Medication>()
-                            .Where(i => i.Medication_ID == Medication_ID)
+                            .Where(i => i.MedicationID == medicationID)
                             .FirstOrDefaultAsync();
         }
 
@@ -30,11 +26,11 @@ namespace QuickMeds.Data {
             Task<List<MedicationList>> l;
             string query = "";
             foreach (char c in letterGroup) {
-                query += "SELECT Brand_Name AS MedicationName, 'B' AS MedicationType, Generic_Name AS MedicationAKA, BT_Flag AS MedicationBTFlag " +
-                    "FROM [MEDICATIONS] WHERE Brand_Name LIKE '" + c + "%' " + 
+                query += "SELECT BrandName AS MedicationName, 'B' AS MedicationType, GenericName AS MedicationAKA, BTFlag AS MedicationBTFlag " +
+                    "FROM [Medication] WHERE BrandName LIKE '" + c + "%' " + 
                     "UNION " +
-                    "SELECT Generic_Name AS MedicationName, 'G' AS MedicationType, Brand_Name AS MedicationAKA, BT_Flag AS MedicationBTFlag " +
-                    "FROM [MEDICATIONS] WHERE Generic_Name LIKE '" + c + "%' " +
+                    "SELECT GenericName AS MedicationName, 'G' AS MedicationType, BrandName AS MedicationAKA, BTFlag AS MedicationBTFlag " +
+                    "FROM [Medication] WHERE GenericName LIKE '" + c + "%' " +
                     "UNION ";
             }
             query = query.Substring(0, query.LastIndexOf("UNION "));
@@ -49,27 +45,27 @@ namespace QuickMeds.Data {
 
         public Task<Condition> GetConditionAsync(int conditionID) {
             return _database.Table<Condition>()
-                            .Where(i => i.Condition_ID == conditionID)
+                            .Where(i => i.ConditionID == conditionID)
                             .FirstOrDefaultAsync();
         }
 
-        public Task<List<Action>> GetActionAsync() {
-            return _database.Table<Action>().ToListAsync();
+        public Task<List<ActionClass>> GetActionAsync() {
+            return _database.Table<ActionClass>().ToListAsync();
         }
 
-        public Task<Action> GetActionAsync(int actionID) {
-            return _database.Table<Action>()
-                            .Where(i => i.Action_ID == actionID)
+        public Task<ActionClass> GetActionAsync(int actionClassID) {
+            return _database.Table<ActionClass>()
+                            .Where(i => i.ActionClassID == actionClassID)
                             .FirstOrDefaultAsync();
         }
 
-        public Task<List<Control>> GetControlAsync() {
-            return _database.Table<Control>().ToListAsync();
+        public Task<List<ControlClass>> GetControlAsync() {
+            return _database.Table<ControlClass>().ToListAsync();
         }
 
-        public Task<Control> GetControlAsync(int controlID) {
-            return _database.Table<Control>()
-                            .Where(i => i.Control_ID == controlID)
+        public Task<ControlClass> GetControlAsync(int controlClassID) {
+            return _database.Table<ControlClass>()
+                            .Where(i => i.ControlClassID == controlClassID)
                             .FirstOrDefaultAsync();
         }
     }
