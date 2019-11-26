@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace QuickMeds.Models {
+﻿namespace QuickMeds.Models {
     public class MedicationList {
         public string MedicationName { get; set; }
         public string MedicationAKA { get; set; }
