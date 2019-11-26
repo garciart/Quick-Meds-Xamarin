@@ -15,7 +15,7 @@ namespace QuickMeds {
         private async void UpdateDatabaseButton_Clicked(object sender, EventArgs e) {
             bool answer = await DisplayAlert("Quick Meds", AppResources.UpdateConfirm, AppResources.ButtonYes, AppResources.ButtonNo);
             if (answer) {
-                string databaseFile = "medications.db";
+                string databaseFile = "QuickMeds.db";
                 string databaseURL = "https://raw.githubusercontent.com/garciart/QuickMeds/master/Database/" + databaseFile;
                 try {
                     byte[] returnedBytes = await AppFunctions.DownloadFileAsync(databaseURL);

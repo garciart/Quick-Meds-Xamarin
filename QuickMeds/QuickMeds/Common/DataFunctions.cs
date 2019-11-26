@@ -13,16 +13,16 @@ namespace QuickMeds.Data {
 
         public DataFunctions(string dbPath) {
             _database = new SQLiteAsyncConnection(dbPath);
-            _database.CreateTableAsync<MEDICATIONS>().Wait();
+            _database.CreateTableAsync<Medication>().Wait();
         }
 
-        public Task<List<MEDICATIONS>> GetMedicationsAsync() {
-            return _database.Table<MEDICATIONS>().ToListAsync();
+        public Task<List<Medication>> GetMedicationsAsync() {
+            return _database.Table<Medication>().ToListAsync();
         }
 
-        public Task<MEDICATIONS> GetMedicationsAsync(int MEDID) {
-            return _database.Table<MEDICATIONS>()
-                            .Where(i => i.MEDID == MEDID)
+        public Task<Medication> GetMedicationsAsync(int Medication_ID) {
+            return _database.Table<Medication>()
+                            .Where(i => i.Medication_ID == Medication_ID)
                             .FirstOrDefaultAsync();
         }
 
@@ -30,11 +30,11 @@ namespace QuickMeds.Data {
             Task<List<MedicationList>> l;
             string query = "";
             foreach (char c in letterGroup) {
-                query += "SELECT BNAME AS MedicationName, 'B' AS MedicationType, GNAME AS MedicationAKA, BTFLAG AS MedicationBTFlag " +
-                    "FROM [MEDICATIONS] WHERE BNAME LIKE '" + c + "%' " + 
+                query += "SELECT Brand_Name AS MedicationName, 'B' AS MedicationType, Generic_Name AS MedicationAKA, BT_Flag AS MedicationBTFlag " +
+                    "FROM [MEDICATIONS] WHERE Brand_Name LIKE '" + c + "%' " + 
                     "UNION " +
-                    "SELECT GNAME AS MedicationName, 'G' AS MedicationType, BNAME AS MedicationAKA, BTFLAG AS MedicationBTFlag " +
-                    "FROM [MEDICATIONS] WHERE GNAME LIKE '" + c + "%' " +
+                    "SELECT Generic_Name AS MedicationName, 'G' AS MedicationType, Brand_Name AS MedicationAKA, BT_Flag AS MedicationBTFlag " +
+                    "FROM [MEDICATIONS] WHERE Generic_Name LIKE '" + c + "%' " +
                     "UNION ";
             }
             query = query.Substring(0, query.LastIndexOf("UNION "));
@@ -49,7 +49,7 @@ namespace QuickMeds.Data {
 
         public Task<Condition> GetConditionAsync(int conditionID) {
             return _database.Table<Condition>()
-                            .Where(i => i.ConditionID == conditionID)
+                            .Where(i => i.Condition_ID == conditionID)
                             .FirstOrDefaultAsync();
         }
 
@@ -59,7 +59,7 @@ namespace QuickMeds.Data {
 
         public Task<Action> GetActionAsync(int actionID) {
             return _database.Table<Action>()
-                            .Where(i => i.ActionID == actionID)
+                            .Where(i => i.Action_ID == actionID)
                             .FirstOrDefaultAsync();
         }
 
@@ -69,7 +69,7 @@ namespace QuickMeds.Data {
 
         public Task<Control> GetControlAsync(int controlID) {
             return _database.Table<Control>()
-                            .Where(i => i.ControlID == controlID)
+                            .Where(i => i.Control_ID == controlID)
                             .FirstOrDefaultAsync();
         }
     }

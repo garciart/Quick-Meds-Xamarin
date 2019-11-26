@@ -42,7 +42,7 @@ namespace QuickMeds {
         public static DataFunctions Database {
             get {
                 if (database == null) {
-                    database = new DataFunctions(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "medications.db"));
+                    database = new DataFunctions(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "QuickMeds.db"));
                 }
                 return database;
             }
