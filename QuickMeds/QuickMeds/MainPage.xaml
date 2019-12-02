@@ -1,8 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="QuickMeds.MainPage"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:local="clr-namespace:QuickMeds"
+             x:Class="QuickMeds.MainPage"
+             mc:Ignorable="d"             
              Title="{x:Static local:Resources.AppResources.Title}">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
@@ -17,6 +20,7 @@
                 <Button x:Name="medNameButton" Text="{x:Static local:Resources.AppResources.MedicationSearchTitle}" HorizontalOptions="Fill" StyleClass="button" Clicked="MedNameButton_Clicked" />
                 <Button x:Name="conNameButton" Text="{x:Static local:Resources.AppResources.ConditionSearchTitle}" HorizontalOptions="Fill" StyleClass="button" Clicked="ConNameButton_Clicked" />
                 <Button x:Name="AboutButton" Text="{x:Static local:Resources.AppResources.AboutTitle}" StyleClass="button" Clicked="AboutButton_Clicked" />
+                <Button x:Name="TestButton" Text="Test" StyleClass="button" Clicked="TestButton_Clicked" />                        
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

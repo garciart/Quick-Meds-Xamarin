@@ -22,47 +22,66 @@
  * THE SOFTWARE.
  */
 
+using QuickMeds.Common;
 using System;
 using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using QuickMeds.Data;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace QuickMeds {
-    /**
-     * Application controller page
-     *
-     * @author Rob Garcia at rgarcia@rgprogramming.com
-     */
+    /// <summary>
+    /// Application entry point
+    /// </summary>
     public partial class App : Application {
 
         static DataFunctions database;
-
+        /// <summary>
+        /// Open the database once and only once when the application starts.
+        /// </summary>
         public static DataFunctions Database {
             get {
                 if (database == null) {
-                    database = new DataFunctions(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "QuickMeds.db"));
+                    // The database is stored in /data/user/0/com.companyname.QuickMeds/files/.local/share/QuickMeds.db
+                    string dataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "QuickMeds.db");
+                    /*
+                    FileInfo fi = new FileInfo(dataPath);
+                    Console.WriteLine(fi.Length);
+                    Console.WriteLine(dataPath);
+                    */
+                    database = new DataFunctions(dataPath);
                 }
                 return database;
             }
         }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public App() {
             InitializeComponent();
             MainPage = new NavigationPage(new MainPage());
         }
 
+        /// <summary>
+        /// Handle when your app starts
+        /// </summary>
         protected override void OnStart() {
-            // Handle when your app starts
+
         }
 
+        /// <summary>
+        /// Handle when your app sleeps
+        /// </summary>
         protected override void OnSleep() {
-            // Handle when your app sleeps
+
         }
 
+        /// <summary>
+        /// Handle when your app resumes
+        /// </summary>
         protected override void OnResume() {
-            // Handle when your app resumes
+
         }
     }
 }

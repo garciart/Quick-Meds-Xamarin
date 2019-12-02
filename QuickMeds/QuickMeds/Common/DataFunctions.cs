@@ -1,9 +1,10 @@
 ﻿using QuickMeds.Models;
 using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace QuickMeds.Data {
+namespace QuickMeds.Common {
     public class DataFunctions {
         readonly SQLiteAsyncConnection _database;
 
@@ -33,9 +34,12 @@ namespace QuickMeds.Data {
                     "FROM [Medication] WHERE GenericName LIKE '" + c + "%' " +
                     "UNION ";
             }
+
             query = query.Substring(0, query.LastIndexOf("UNION "));
             query += "ORDER BY MedicationName ASC;";
+            // Console.WriteLine(query);
             l = _database.QueryAsync<MedicationList>(query);
+            Console.WriteLine(l);
             return l;
         }
 

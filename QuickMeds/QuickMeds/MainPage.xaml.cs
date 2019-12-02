@@ -24,50 +24,63 @@
 
 using QuickMeds.Common;
 using System;
-using System.IO;
 using Xamarin.Forms;
 
 namespace QuickMeds {
-    /**
-     * Landing page for application
-     *
-     * @author Rob Garcia at rgarcia@rgprogramming.com
-     */
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class MainPage : ContentPage {
 
-        // string _configFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "QuickMeds.config");
-        static bool loadFlag = false;
-
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public MainPage() {
             InitializeComponent();
             headerImage.Source = ImageSource.FromResource("QuickMeds.Assets.headerImage_v1.png");
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         protected override void OnAppearing() {
-            /*
-            if(loadFlag == false) {
-                if (File.Exists(_configFile)) {
-                    Application.Current.MainPage.DisplayAlert("Alert", "Found the configuration file!", "OK");
-                }
-                else {
-                    Application.Current.MainPage.DisplayAlert("Alert", "No configuration file found!", "OK");
-                }
-                loadFlag = true;
-            }
-            */
             base.OnAppearing();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         async void MedNameButton_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new KeypadPage(Constants.LookUpFlag.MEDS));
+            await Navigation.PushAsync(new KeypadPage(Constants.LookUpFlag.MEDS)).ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         async void ConNameButton_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new KeypadPage(Constants.LookUpFlag.CONS));
+            await Navigation.PushAsync(new KeypadPage(Constants.LookUpFlag.CONS)).ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void AboutButton_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new AboutPage());
+            await Navigation.PushAsync(new AboutPage()).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void TestButton_Clicked(object sender, EventArgs e) {
+            await Navigation.PushAsync(new Test()).ConfigureAwait(false);
         }
     }
 }
