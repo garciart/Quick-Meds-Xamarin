@@ -39,7 +39,7 @@ namespace QuickMeds {
 
         protected override async void OnAppearing() {
             base.OnAppearing();
-            listView.ItemsSource = await App.Database.GetMedicationListByGroup(letterGroup);
+            listView.ItemsSource = await App.Database.GetMedicationListByGroup(letterGroup).ConfigureAwait(false);
         }
     }
 }
