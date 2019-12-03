@@ -22,33 +22,29 @@
  * THE SOFTWARE.
  */
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
 
 namespace QuickMeds.Common {
-    /**
-     * Class for common constants
-     *
-     * @author Rob Garcia at rgarcia@rgprogramming.com
-     */
+
+    /// <summary>
+    /// Store constants here to avoid having to make changes in multiple places
+    /// </summary>
     public static class Constants {
         /// <summary>
         /// The path of the settings file and test files.
         /// </summary>
-        public static string AppDataPath { get; private set; } = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+        public static string AppDataPath { get; private set; } = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
 
-        /**
-         * Look-up flags
-         */
+        /// <summary>
+        /// Look-up flags 
+        /// </summary>
         public enum LookUpFlag {
-            /**
-             * MEDS to display medications
-             */
+            /// <summary>
+            /// MEDS to display medications
+            /// </summary>
             MEDS,
-            /**
-             * COND to display conditions
-             */
+            /// <summary>
+            /// COND to display conditions
+            /// </summary>
             CONS
         }
     }

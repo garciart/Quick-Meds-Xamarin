@@ -30,25 +30,21 @@ using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace QuickMeds {
-    /// <summary>
-    /// Application entry point
-    /// </summary>
-    public partial class App : Application {
 
+    public partial class App : Application {
+        /// <summary>
+        /// 
+        /// </summary>
         static DataFunctions database;
+
         /// <summary>
         /// Open the database once and only once when the application starts.
         /// </summary>
         public static DataFunctions Database {
             get {
                 if (database == null) {
-                    // The database is stored in /data/user/0/com.companyname.QuickMeds/files/.local/share/QuickMeds.db
-                    string dataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "QuickMeds.db");
-                    /*
-                    FileInfo fi = new FileInfo(dataPath);
-                    Console.WriteLine(fi.Length);
-                    Console.WriteLine(dataPath);
-                    */
+                    // The database is stored in /data/user/0/com.companyname.QuickMeds/files/QuickMeds.db
+                    string dataPath = Path.Combine(Constants.AppDataPath, "QuickMeds.db");
                     database = new DataFunctions(dataPath);
                 }
                 return database;

@@ -6,7 +6,7 @@ namespace QuickMeds.Models {
         public int MedicationID { get; set; }
         public string GenericName { get; set; }
         public string BrandName { get; set; }
-        public int ActionClass { get; set; }
+        public string ActionClass { get; set; }
         public int ControlClass { get; set; }
         public int BTFlag { get; set; }
         public string SideEffects { get; set; }

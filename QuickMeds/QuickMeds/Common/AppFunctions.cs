@@ -29,6 +29,7 @@ using System.Threading.Tasks;
 namespace QuickMeds.Common {
     public static class AppFunctions {
         /// <summary>
+        /// Download the database from GitHub
         /// Thanks to Daxton47 at https://forums.xamarin.com/discussion/138266/how-to-hit-an-url-to-download-a-file
         /// </summary>
         /// <param name="fileUrl"></param>

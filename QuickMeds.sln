@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickMeds.Android", "QuickMeds\QuickMeds.Android\QuickMeds.Android.csproj", "{9EFC30B7-85D2-474C-AE55-1669F5724469}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A21FD04C-2B18-45C9-8E9A-83331FB7BA8D} = {A21FD04C-2B18-45C9-8E9A-83331FB7BA8D}
+		{E8C958CE-B273-4D0A-877B-DEA35A3D4942} = {E8C958CE-B273-4D0A-877B-DEA35A3D4942}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickMeds.iOS", "QuickMeds\QuickMeds.iOS\QuickMeds.iOS.csproj", "{E8C958CE-B273-4D0A-877B-DEA35A3D4942}"
 EndProject

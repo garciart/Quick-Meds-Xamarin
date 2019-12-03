@@ -53,7 +53,7 @@ namespace QuickMeds {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         async void MedNameButton_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new KeypadPage(Constants.LookUpFlag.MEDS)).ConfigureAwait(false);
+            await Navigation.PushAsync(new KeypadPage(Constants.LookUpFlag.MEDS));
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace QuickMeds {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         async void ConNameButton_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new KeypadPage(Constants.LookUpFlag.CONS)).ConfigureAwait(false);
+            await Navigation.PushAsync(new KeypadPage(Constants.LookUpFlag.CONS));
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace QuickMeds {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private async void AboutButton_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new AboutPage()).ConfigureAwait(false);
+            await Navigation.PushAsync(new AboutPage());
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace QuickMeds {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private async void TestButton_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new Test()).ConfigureAwait(false);
+            await Navigation.PushAsync(new Test());
         }
     }
 }

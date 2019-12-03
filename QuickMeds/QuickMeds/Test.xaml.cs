@@ -10,7 +10,7 @@ namespace QuickMeds {
         /*
         protected override void OnAppearing() {
             base.OnAppearing();
-            // listView.ItemsSource = await App.Database.GetMedicationsAsync().ConfigureAwait(false);
+            // listView.ItemsSource = await App.Database.GetMedicationsAsync();
             listView.ItemsSource = new string[] {
                 "mono",
                 "monodroid",
@@ -27,7 +27,7 @@ namespace QuickMeds {
 
         protected override async void OnAppearing() {
             base.OnAppearing();
-            listView.ItemsSource = await App.Database.GetMedicationListByGroup("ABC").ConfigureAwait(false);
+            listView.ItemsSource = await App.Database.GetConditionsAsync();
         }
     }
 }
